@@ -27,86 +27,85 @@ const Products = () => {
     getProdects();
   }, []);
 
-  const FilterProduct = (cate) =>{
-    const updaateList = data?.filter((d)=>d?.category === cate)
+  const FilterProduct = (cate) => {
+    const updaateList = data?.filter((d) => d?.category === cate);
     setFilter(updaateList);
-  }
+  };
 
   const Loading = () => {
     return (
       <>
- 
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
         <div className="col-md-3">
-          <Skeleton  height={350}/>
-          <Skeleton  height={30} width={250}/>
-          <Skeleton  height={15} width={150}/>
-          <Skeleton  height={10} width={100}/>
+          <Skeleton height={350} />
+          <Skeleton height={30} width={250} />
+          <Skeleton height={15} width={150} />
+          <Skeleton height={10} width={100} />
         </div>
       </>
     );
@@ -115,33 +114,46 @@ const Products = () => {
     return (
       <>
         <div className="button d-flex justify-content-center pb-5">
-          <button className="btn btn-outline-dark mx-2"
-          onClick={()=>{
-            setFilter(data);
-          }}
-          >All</button>
-          <button className="btn btn-outline-dark mx-2"
-          onClick={()=>{
-            FilterProduct("men's clothing");
-          }}
-          >Man's Clothing</button>
-          <button className="btn btn-outline-dark mx-2"
-          onClick={()=>{
-            FilterProduct("women's clothing");
-          }}
+          <button
+            className="btn btn-outline-dark mx-2"
+            onClick={() => {
+              setFilter(data);
+            }}
+          >
+            All
+          </button>
+          <button
+            className="btn btn-outline-dark mx-2"
+            onClick={() => {
+              FilterProduct("men's clothing");
+            }}
+          >
+            Man's Clothing
+          </button>
+          <button
+            className="btn btn-outline-dark mx-2"
+            onClick={() => {
+              FilterProduct("women's clothing");
+            }}
           >
             Woman's Clothing
           </button>
-          <button className="btn btn-outline-dark mx-2"
-          onClick={()=>{
-            FilterProduct('jewelery');
-          }}
-          >Jewellery</button>
-          <button className="btn btn-outline-dark mx-2"
-          onClick={()=>{
-            FilterProduct('electronics');
-          }}
-          >Electronic</button>
+          <button
+            className="btn btn-outline-dark mx-2"
+            onClick={() => {
+              FilterProduct("jewelery");
+            }}
+          >
+            Jewellery
+          </button>
+          <button
+            className="btn btn-outline-dark mx-2"
+            onClick={() => {
+              FilterProduct("electronics");
+            }}
+          >
+            Electronic
+          </button>
         </div>
         {filter?.map((product) => {
           return (
@@ -159,7 +171,10 @@ const Products = () => {
                       {product?.title?.substring(0, 12)}...
                     </h5>
                     <p className="card-text lead fw-bold">${product?.price}</p>
-                    <Link to={`/products/${product?.id}}`} className="btn btn-outline-dark">
+                    <Link
+                      to={"/products/" + product?.id}
+                      className="btn btn-outline-dark"
+                    >
                       Buy Now
                     </Link>
                   </div>

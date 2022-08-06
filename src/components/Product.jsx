@@ -9,18 +9,19 @@ const Product = () => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
   // const dispatch = useDispatch();
-
+  const getProduct = async () => {
+    setLoading(true);
+    fetch(`https://fakestoreapi.com/products/${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setProduct(data);
+        setLoading(false);
+      });
+  };
   useEffect(() => {
-    const getProduct = async () => {
-      setLoading(true);
-      const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-      setProduct(await response.json());
-      setLoading(false);
-    };
-if(id){
-console.log("🚀 ~ file: Product.jsx ~ line 21 ~ useEffect ~ id", id)
-getProduct();
-}
+    if (id) {
+      getProduct();
+    }
   }, [id]);
 
   // const addProduct = (product) => {
