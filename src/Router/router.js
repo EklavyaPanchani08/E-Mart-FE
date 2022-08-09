@@ -4,6 +4,7 @@ import Home from '../components/Home';
 import Login from '../components/Login';
 import Product from '../components/Product';
 import Products from '../components/Products';
+import Regiter from '../components/Regiter';
 import Test from '../components/Test';
 
 const Router = () => {
@@ -28,6 +29,11 @@ const Router = () => {
         path: "/login",
         isExact: true,
         element: <Login />,
+      },
+      {
+        path: "/regiter",
+        isExact: true,
+        element: <Regiter />,
       },
     ]);
   
