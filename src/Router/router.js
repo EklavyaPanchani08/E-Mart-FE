@@ -1,5 +1,7 @@
 import React from 'react'
 import {useRoutes } from 'react-router-dom';
+import About from '../components/About';
+import Contact from '../components/Contact';
 import Home from '../components/Home';
 import Login from '../components/Login';
 import Product from '../components/Product';
@@ -34,6 +36,16 @@ const Router = () => {
         path: "/regiter",
         isExact: true,
         element: <Regiter />,
+      },
+      {
+        path: "/about",
+        isExact: true,
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        isExact: true,
+        element: <Contact />,
       },
     ]);
   
