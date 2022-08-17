@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button, Checkbox, Form, Input } from "antd";
 import "antd/dist/antd.css";
 import Img from "../assets/signup.jpg";
-import "../css/register.css";
+import "../scss/register.css";
 
 const Register = () => {
   // All States

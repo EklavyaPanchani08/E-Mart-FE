@@ -11,6 +11,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.2.0",
     "font-awesome": "^4.7.0",
+    "node-sass": "^7.0.1",
     "react": "^18.1.0",
     "react-chat-engine": "^1.11.22",
     "react-dom": "^18.1.0",
