@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+// import { useDispatch } from "react-redux";
 // import { useDispatch} from 'react-redux'
 import { addCart } from "../Redux/Action";
 import Skeleton from "react-loading-skeleton";

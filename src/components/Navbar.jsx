@@ -17,23 +17,18 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
-              <li className="nav-item mx-2">
-                <Link className="nav-link active" to="/products">
+              <li className="nav-item">
+                <Link className="nav-link" to="/products">
                   Product
                 </Link>
               </li>
-              <li className="nav-item mx-2">
-                <Link className="nav-link active" to="/about">
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">
                   About
                 </Link>
               </li>
-              <li className="nav-item mx-2">
-                <Link className="nav-link active" to="/about">
-                  Blog
-                </Link>
-              </li>
-              <li className="nav-item mx-2">
-                <Link className="nav-link active" to="/contact">
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">
                   Contact
                 </Link>
               </li>
