@@ -1,6 +1,32 @@
 .register-img{
     width: 600px;
 }
-.col-lg-6 .all-input{
-    /* width: 500px; */
+.form{
+    margin-top: 100px;       
+}
+@media (max-width:1220px) {
+    .register-img{
+        width:550px ;
+    }
+}
+@media (max-width:991px) {
+    .register-img{
+        width:500px ;
+        margin: 0px auto;
+        display: flex
+    }
+    .form{
+        margin-top: 0px !important;
+        padding-right: 80px;
+    }
+}
+@media (max-width:575px) {
+    .register-img{
+        width:450px;
+    }
+    .form{
+        padding-right: 0px !important;
+        align-items: left;
+        text-align: left;
+    }
 }

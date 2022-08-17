@@ -1,0 +1,14 @@
+.login-img{
+    width: 700px;
+}
+@media (max-width:1200px) {
+    .login-img{
+        width:600px;
+    }
+}
+@media (max-width:990px) {
+    .login-img{
+        margin: 0px auto;
+        display: flex;
+    }
+}
