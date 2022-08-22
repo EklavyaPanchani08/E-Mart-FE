@@ -1,5 +1,20 @@
-.slider{
-    height: '800px' !important;
-    width: '100%';
-    line-height: '160px';
+.nav-toggle{
+    cursor: pointer;
+}
+@media (min-width:767px) {
+    .nav-toggle{
+        display: none !important;
+    }
+}
+.carousel-control-next, .carousel-control-prev{
+    width: auto !important;
+}
+.carousel-control-next-icon ,.carousel-control-next-icon{
+    width: 25px !important;
+}
+.carousel-indicators [data-bs-target]{
+    width: 20px !important;
+}
+.carousel-indicators{
+    margin-bottom: 10px !important;
 }
