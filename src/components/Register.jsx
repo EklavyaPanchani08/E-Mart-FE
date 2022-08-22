@@ -4,6 +4,8 @@ import { Button, Checkbox, Form, Input } from "antd";
 import "antd/dist/antd.css";
 import Img from "../assets/signup.jpg";
 import "../scss/register.css";
+import "../scss/home.scss";
+import "../scss/button.scss";
 
 const Register = () => {
   // All States
@@ -234,9 +236,9 @@ const Register = () => {
                 span: 16,
               }}
             >
-              <Button type="primary" htmlType="submit" size="large" onClick={() => { submitHandle() }} >
-                Sign up
-              </Button>
+              <button className='my-btn theme-btn'>
+                Sign Up
+              </button>
             </Form.Item>
           </Form>
         </div>

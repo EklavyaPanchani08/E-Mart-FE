@@ -7,7 +7,6 @@ import Login from '../components/Login';
 import Product from '../components/Product';
 import Products from '../components/Products';
 import Register from '../components/Register';
-import Test from '../components/Test';
 
 const Router = () => {
 

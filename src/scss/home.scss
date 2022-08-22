@@ -1,20 +1,61 @@
-.nav-toggle{
-    cursor: pointer;
+// =======NAVBAR=========
+.nav-toggle {
+  cursor: pointer;
 }
-@media (min-width:767px) {
-    .nav-toggle{
-        display: none !important;
-    }
+@media (min-width: 767px) {
+  .nav-toggle {
+    display: none !important;
+  }
 }
-.carousel-control-next, .carousel-control-prev{
-    width: auto !important;
+
+// =====SLIDER======
+.carousel-control-next,
+.carousel-control-prev {
+  width: auto !important;
 }
-.carousel-control-next-icon ,.carousel-control-next-icon{
-    width: 25px !important;
+.carousel-control-next-icon,
+.carousel-control-next-icon {
+  width: 25px !important;
 }
-.carousel-indicators [data-bs-target]{
-    width: 20px !important;
+.carousel-indicators [data-bs-target] {
+  width: 20px !important;
 }
-.carousel-indicators{
-    margin-bottom: 10px !important;
+.carousel-indicators {
+  margin-bottom: 10px !important;
+}
+
+// ======FROM========
+.ant-input:focus,
+.ant-input-focused {
+  border-color: #9c9efe !important;
+  box-shadow: none !important;
+}
+.ant-input {
+  padding: 7px 0px !important;
+}
+.ant-input-affix-wrapper > input.ant-input {
+  padding: 3px !important;
+}
+.ant-input:hover {
+  border-color: #9c9efe !important;
+}
+.ant-input-affix-wrapper-focused,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: #9c9efe !important;
+}
+.ant-form-item-label > label {
+  font-size: 15px !important;
+  font-weight: 500;
+  padding-right: 15px !important;
+  padding-top: 5px !important;
+}
+
+// ======HOME======
+.card-img {
+  .card-img-top {
+    height: 400px;
+    width: 350px;
+    border-radius: 0px;
+  }
 }

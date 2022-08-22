@@ -1,0 +1,69 @@
+.my-btn {
+    z-index: 1;
+    padding: 6px 25px !important;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+}
+@media (max-width:767px) {
+    .my-btn{
+        padding: 6px 15px !important;
+        font-size: 14px !important;
+    }
+  }
+  .theme-btn {
+    border: 2px solid #9C9EFE;
+    color: #9C9EFE;
+    transition: all 0.3s ease;
+    border-color: #9C9EFE;
+  }
+  .theme-btn:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+  .theme-btn:hover {
+    color: #fff;
+  }
+  .theme-btn:hover:after {
+    background: #9C9EFE;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-radius: 10px;
+  }
+  .cancel-btn {
+    color: #001D6E;
+  }
+  .cancel-btn:after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+  }
+  .cancel-btn:hover {
+    color: #fff;
+  }
+  .cancel-btn:hover:after {
+    background: #001D6E;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-radius: 10px;
+  }

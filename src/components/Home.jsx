@@ -2,10 +2,12 @@ import React from "react";
 import banner1 from "../assets/banner1.jpeg";
 import banner2 from "../assets/banner2.jpeg";
 import banner5 from "../assets/banner5.jpeg";
-import imgForTest from "../assets/testHome1.jpeg";
+import cartImg1 from "../assets/home-cart-1.jpeg";
+import cartImg2 from "../assets/home-cart-2.jpeg";
+import cartImg3 from "../assets/home-cart-3.jpeg";
 import { Carousel, Card, Image } from "antd";
 import "../scss/home.scss";
-import Meta from "antd/lib/card/Meta";
+import "../scss/button.scss";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -69,57 +71,41 @@ const Home = () => {
         </button>
       </div>
 
-      <div className="container">
-        <div className="d-flex mx-auto">
-          <div className="card h-100 text-center p-4">
-            <img
-              src={imgForTest}
-              className="card-img-top"
-              height="250px"
-              width="250px"
-            />
-            <div className="card-body">
-              <h5 className="card-title">
-                Hii fjkehkrhfuoh cxiubvdsoigdhicoxn dsiufhieuahuxkvnjcx
-              </h5>
-              <p className="card-text lead fw-bold">$500</p>
-              <Link to={"/products/"} className="btn btn-outline-dark">
-                Buy Now
-              </Link>
+      <div className="bg-dark">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4 col card h-100 text-center bg-dark card-img border-0">
+              <img
+                src={cartImg1}
+                className="card-img-top"
+              />
+              <div className="mt-3 text-left" style={{ width: '350px ' }}>
+                <h5 className="text-white">MEN'S COLLATION</h5>
+                <p className="text-white mx-2">See our top-picks for jean jackets that are oversized, distressed, and downright cool.</p>
+                <button className="my-btn theme-btn cart-btn">See All</button>
+              </div>
             </div>
-          </div>
-          <div className="card h-100 text-center p-4">
-            <img
-              src={imgForTest}
-              className="card-img-top"
-              height="250px"
-              width="250px"
-            />
-            <div className="card-body">
-              <h5 className="card-title">
-                Hii fjkehkrhfuoh cxiubvdsoigdhicoxn dsiufhieuahuxkvnjcx
-              </h5>
-              <p className="card-text lead fw-bold">$500</p>
-              <Link to={"/products/"} className="btn btn-outline-dark">
-                Buy Now
-              </Link>
+            <div className="col-lg-4 card h-100 text-center bg-dark card-img  border-0">
+              <img
+                src={cartImg2}
+                className="card-img-top"
+              />
+              <div className="mt-3 text-left" style={{ width: '350px ' }}>
+                <h5 className="text-white">WOMEN'S COLLATION</h5>
+                <p className="text-white mx-2">See our top-picks for jean jackets that are oversized, distressed, and downright cool.</p>
+                <button className="my-btn theme-btn cart-btn">See All</button>
+              </div>
             </div>
-          </div>
-          <div className="card h-100 text-center p-4">
-            <img
-              src={imgForTest}
-              className="card-img-top"
-              height="250px"
-              width="250px"
-            />
-            <div className="card-body">
-              <h5 className="card-title">
-                Hii fjkehkrhfuoh cxiubvdsoigdhicoxn dsiufhieuahuxkvnjcx
-              </h5>
-              <p className="card-text lead fw-bold">$500</p>
-              <Link to={"/products/"} className="btn btn-outline-dark">
-                Buy Now
-              </Link>
+            <div className="col-lg-4 card h-100 text-center bg-dark card-img  border-0">
+              <img
+                src={cartImg3}
+                className="card-img-top"
+              />
+              <div className="mt-3 text-left" style={{ width: '350px ' }}>
+                <h5 className="text-white">CHILDREN'S COLLATION</h5>
+                <p className="text-white mx-2">See our top-picks for jean jackets that are oversized, distressed, and downright cool.</p>
+                <button className="my-btn theme-btn cart-btn">See All</button>
+              </div>
             </div>
           </div>
         </div>

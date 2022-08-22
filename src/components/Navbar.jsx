@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo-black.png"
+import '../scss/button.scss';
 
 const Navbar = () => {
 
@@ -41,20 +42,20 @@ const Navbar = () => {
               </li>
             </ul>
             <div>
-              <Link to="/login" className="btn btn-outline-dark">
+              <Link to="/login" className="my-btn theme-btn">
                 Login
               </Link>
-              <Link to="/regiter" className="btn btn-outline-dark ms-2">
+              <Link to="/regiter" className="my-btn theme-btn ms-2">
                 Regiter
               </Link>
-              <Link to="/cart" className="btn btn-outline-dark ms-2">
+              <Link to="/cart" className="my-btn theme-btn ms-2">
                 Cart (0)
               </Link>
             </div>
           </div>
-      <div className="nav-toggle">
-        <a  href="#" className="text-dark manu-toggle"><i className="fa-solid fa-align-right"></i></a>
-      </div>
+          <div className="nav-toggle">
+            <a href="#" className="text-dark manu-toggle"><i className="fa-solid fa-align-right"></i></a>
+          </div>
         </div>
       </nav>
     </div>
