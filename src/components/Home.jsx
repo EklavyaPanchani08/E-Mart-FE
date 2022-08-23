@@ -5,6 +5,9 @@ import banner5 from "../assets/banner5.jpeg";
 import cartImg1 from "../assets/home-cart-1.jpeg";
 import cartImg2 from "../assets/home-cart-2.jpeg";
 import cartImg3 from "../assets/home-cart-3.jpeg";
+import serviceImg1 from "../assets/service-img-1.png";
+import serviceImg2 from "../assets/service-img-2.png";
+import serviceImg3 from "../assets/service-img-3.png";
 import { Carousel, Card, Image } from "antd";
 import "../scss/home.scss";
 import "../scss/button.scss";
@@ -71,10 +74,10 @@ const Home = () => {
         </button>
       </div>
 
-      <div className="bg-dark">
+      <div className="cart-section py-5">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-4 col card h-100 text-center bg-dark card-img border-0">
+          <div className="d-flex mx-auto align-items-center text-center">
+          <div className="card h-100 text-center card-img border-0">
               <img
                 src={cartImg1}
                 className="card-img-top"
@@ -85,7 +88,7 @@ const Home = () => {
                 <button className="my-btn theme-btn cart-btn">See All</button>
               </div>
             </div>
-            <div className="col-lg-4 card h-100 text-center bg-dark card-img  border-0">
+            <div className="card h-100 text-center card-img  border-0">
               <img
                 src={cartImg2}
                 className="card-img-top"
@@ -96,7 +99,7 @@ const Home = () => {
                 <button className="my-btn theme-btn cart-btn">See All</button>
               </div>
             </div>
-            <div className="col-lg-4 card h-100 text-center bg-dark card-img  border-0">
+            <div className="card h-100 text-center card-img  border-0">
               <img
                 src={cartImg3}
                 className="card-img-top"
@@ -106,6 +109,24 @@ const Home = () => {
                 <p className="text-white mx-2">See our top-picks for jean jackets that are oversized, distressed, and downright cool.</p>
                 <button className="my-btn theme-btn cart-btn">See All</button>
               </div>
+            </div>
+          </div>
+          <hr className="my-5 text-white"/>
+          <div className="row  text-center">
+            <div className="col-md-4">
+              <img width='35px' src={serviceImg1} alt="" />
+              <h6 className="mt-4 text-white">30 DAYS RETURN</h6>
+              <p className="text-white">Simply return it within 30 days for an exchange.</p>
+            </div>
+            <div className="col-md-4">
+              <img width='50px' src={serviceImg2} alt="" />
+              <h6 className="mt-4 text-white">FREE US DELIVERY</h6>
+              <p className="text-white">On orders over $200!</p>
+            </div>
+            <div className="col-md-4">
+              <img width='35px' src={serviceImg3} alt="" />
+              <h6 className="mt-4 text-white">Calling Support</h6>
+              <p className="text-white">Contact us 24 hours a day, 7 days a week</p>
             </div>
           </div>
         </div>
