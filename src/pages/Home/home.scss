@@ -1,4 +1,4 @@
-// =======NAVBAR=========
+//===============NAVBAR=================//
 .nav-toggle {
   cursor: pointer;
 }
@@ -8,7 +8,7 @@
   }
 }
 
-// =====SLIDER======
+// =============SLIDER==============//
 .carousel-control-next,
 .carousel-control-prev {
   width: auto !important;
@@ -24,7 +24,7 @@
   margin-bottom: 10px !important;
 }
 
-// ======FROM========
+// ==============FROM================//
 .ant-input:focus,
 .ant-input-focused {
   border-color: #9c9efe !important;
@@ -51,8 +51,8 @@
   padding-top: 5px !important;
 }
 
-// ======HOME======
-.cart-section{
+// ===========HOME ALL CSS==============//
+.cart-section {
   background-color: black;
   color: white;
 }
@@ -62,5 +62,16 @@
     height: 400px;
     width: 350px;
     border-radius: 0px;
+  }
+}
+.product-cart {
+  .product-img {
+    width: 350px !important;
+  }
+  p:first-child {
+    font-size: 18px;
+  }
+  p:nth(2) {
+    font-size: 15px;
   }
 }

@@ -1,0 +1,63 @@
+/* ==========BUTTLER========= */
+@font-face {
+    font-family: "ButtlerBlack";
+    src: local("Butler_Black"),
+        url("./font/Butler/Butler_Black.otf");
+    /* font-weight: 300; */
+}
+
+@font-face {
+    font-family: "ButtlerBlod";
+    src: local("Butler_Bold"),
+        url("./font/Butler/Butler_Bold.otf");
+    /* font-weight: 300; */
+}
+
+@font-face {
+    font-family: "ButtlerRegular";
+    src: local("Butler_Regular"), url("./font/Butler/Butler_Regular.otf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "ButtlerLight";
+    src: local("Butler_Light"), url("./font/Butler/Butler_Light.otf");
+    /* font-weight: 300; */
+}
+
+@font-face {
+    font-family: "ButtlerUltraLight";
+    src: local("Butler_Ultra_Light"),
+        url("./font/Butler/Butler_Ultra_Light.otf");
+    /* font-weight: 300; */
+}
+
+/* ==========GONTHAM========= */
+@font-face {
+    font-family: "GothamBlack";
+    src: local("Gotham-Black"), url("./font/Gotham/Gotham-Black.otf");
+}
+
+@font-face {
+    font-family: "GothamBlod";
+    src: local("Gotham-Bold"), url("./font/Gotham/Gotham-Bold.otf");
+}
+
+@font-face {
+    font-family: "GothamMedium";
+    src: local("Gotham-Medium"), url("./font/Gotham/Gotham-Medium.otf");
+}
+
+@font-face {
+    font-family: "GothamThin";
+    src: local("Gotham-Thin"), url("./font/Gotham/Gotham-Thin.otf");
+}
+
+body {
+    font-family: "GothamMedium" !important;
+}
+
+h1,
+h2 {
+    font-family: "ButtlerBlod" !important;
+}

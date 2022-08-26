@@ -1,9 +1,9 @@
 import React from 'react'
-import Img from '../assets/contact.jpg'
+import Img from '../../assets/contact.jpg'
 import { Link } from 'react-router-dom';
 import { Form, Input, Button } from 'antd';
-import '../scss/button.scss'
-import '../scss/home.scss'
+import '../../scss/button.scss'
+import '../Home/home.scss'
 const { TextArea } = Input;
 
 const Contact = () => {

@@ -1,12 +1,12 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom';
-import About from '../components/About';
-import Contact from '../components/Contact';
-import Home from '../components/Home';
-import Login from '../components/Login';
-import Product from '../components/Product';
-import Products from '../components/Products';
-import Register from '../components/Register';
+import About from '../pages/About/About';
+import Contact from '../pages/Contact/Contact';
+import Home from '../pages/Home/Home';
+import Login from '../pages/Login/Login';
+import Product from '../pages/OneProduct/Product';
+import Products from '../pages/Products/Products';
+import Register from '../pages/Register/Register';
 
 const Router = () => {
 

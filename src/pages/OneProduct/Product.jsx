@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 // import { useDispatch } from "react-redux";
 // import { useDispatch} from 'react-redux'
-import { addCart } from "../Redux/Action";
+import { addCart } from "../../Redux/Action";
 import Skeleton from "react-loading-skeleton";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 
@@ -70,7 +70,7 @@ const Product = () => {
             <p className="lead mb-4">{product?.description}</p>
             <button
               className="btn btn-outline-dark px-4 py-2 mx-1 mb-3"
-              // onClick={() => addProduct(product)}
+            // onClick={() => addProduct(product)}
             >
               Add To Cart
             </button>

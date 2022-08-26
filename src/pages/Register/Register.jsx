@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { Button, Checkbox, Form, Input } from "antd";
 import "antd/dist/antd.css";
-import Img from "../assets/signup.jpg";
-import "../scss/register.css";
-import "../scss/home.scss";
-import "../scss/button.scss";
+import Img from "../../assets/signup.jpg";
+import "./register.css";
+import "../Home/home.scss";
+import "../../scss/button.scss";
 
 const Register = () => {
   // All States

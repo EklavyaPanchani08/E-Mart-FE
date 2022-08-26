@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button, Checkbox, Form, Input } from 'antd';
 import 'antd/dist/antd.css';
-import Img from '../assets/login.jpg'
-import '../scss/login.css'
+import Img from '../../assets/login.jpg'
+import './login.css'
 
 const Login = () => {
   const onFinish = (values) => {
