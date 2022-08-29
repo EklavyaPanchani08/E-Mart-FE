@@ -3,6 +3,8 @@ import { Button, Checkbox, Form, Input } from 'antd';
 import 'antd/dist/antd.css';
 import Img from '../../assets/login.jpg'
 import './login.css'
+import '../../scss/comman.scss'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const onFinish = (values) => {
@@ -70,7 +72,9 @@ const Login = () => {
                 span: 16,
               }}
             >
-              <Checkbox>Remember me</Checkbox>
+              <Checkbox className='mb-2'>Remember me</Checkbox>
+              <br />
+              <Link to="/regiter">You haven't account ?</Link>
             </Form.Item>
 
             <Form.Item
@@ -79,9 +83,9 @@ const Login = () => {
                 span: 16,
               }}
             >
-              <Button type="primary" htmlType="submit">
+              <button className='my-btn theme-btn' type="primary" htmlType="submit">
                 Submit
-              </Button>
+              </button>
             </Form.Item>
           </Form>
         </div>

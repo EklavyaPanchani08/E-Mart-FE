@@ -1,7 +1,7 @@
 .my-btn {
     z-index: 1;
     padding: 6px 25px !important;
-    border-radius: 10px;
+    border-radius: 0px;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -41,7 +41,7 @@
     background: #9C9EFE;
     -webkit-transform: scale(1);
     transform: scale(1);
-    border-radius: 10px;
+    border-radius: 0px;
   }
   .cancel-btn {
     color: #001D6E;

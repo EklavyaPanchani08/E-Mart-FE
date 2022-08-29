@@ -5,14 +5,16 @@ import "antd/dist/antd.css";
 import Img from "../../assets/signup.jpg";
 import "./register.css";
 import "../Home/home.scss";
+import '../../scss/comman.scss'
 import "../../scss/button.scss";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   // All States
   const [inputData, setInputData] = useState({});
   console.log("🚀 ~ file: Register.jsx ~ line 11 ~ Register ~ inputData", inputData)
 
-  const inputDataStore = (value, name) => {
+  const inputDataStore = (name,value) => {
     setInputData({ ...inputData, [name]: value });
   };
   const onFinish = (values) => {
@@ -23,96 +25,17 @@ const Register = () => {
     console.log("Failed:", errorInfo);
   };
   const submitHandle = () => {
-
+    if(inputData.pasword.length <= 8){
+      document.getElementById('errorName').innerHTML = "Enter passowrd up 8 char"
+    }
+    else if(inputData.pasword === inputData.conformpasword){
+      console.log("=====")
+    }
+    else{
+        inputData({})
+    }
   }
   return (
-    // <div className="container">
-    //   <div className="row align-items-center justify-content-between">
-    //     <div className="col-lg-6">
-    //       <img className="register-img" src={Img} alt="" />
-    //     </div>
-    //     <div className="col-lg-6 align-align-items-center">
-    //       <div className="mb-2">
-    //         <label htmlFor="staticEmail" className=" col-form-label">
-    //           Full Name
-    //         </label>
-    //         <input onChange={(e)=>{inputDataStore(e.target.value , e.target.name)}} name='fullName' type="text" className="form-control all-input" />
-    //       </div>
-    //       <div className="mb-2">
-    //         <label htmlFor="staticEmail" className=" col-form-label">
-    //           User Name
-    //         </label>
-    //         <input onChange={(e)=>{inputDataStore(e.target.value , e.target.name)}} name='userName' type="text" className="form-control all-input" />
-    //       </div>
-    //       <div className="mb-2">
-    //         <label htmlFor="staticEmail" className=" col-form-label">
-    //           Mobile No.
-    //         </label>
-    //         <input onChange={(e)=>{inputDataStore(e.target.value , e.target.name)}} name='mobile' type="number" className="form-control all-input" />
-    //       </div>
-    //       <div className="mb-2">
-    //         <label htmlFor="staticEmail" className=" col-form-label">
-    //           Email
-    //         </label>
-    //         <input onChange={(e)=>{inputDataStore(e.target.value , e.target.name)}} name='email' type="email" className="form-control all-input" />
-    //       </div>
-    //       <div className="mb-2">
-    //         <label htmlFor="inputPassword" className=" col-form-label">
-    //           Password
-    //         </label>
-    //         <input onChange={(e)=>{inputDataStore(e.target.value , e.target.name)}} name='password' type="password" className="form-control all-input" />
-    //       </div>
-    //       <div className="mb-2">
-    //         <label htmlFor="inputPassword" className=" col-form-label">
-    //           Conform Password
-    //         </label>
-    //         <input onChange={(e)=>{inputDataStore(e.target.value , e.target.name)}} name='conform password' type="password" className="form-control all-input" />
-    //       </div>
-    //       <div className="mb-1 d-flex">
-    //         <div className="form-check me-2">
-    //           <input onChange={(e)=>{inputDataStore(e.target.checked , e.target.name)}}
-    //             name='male'
-    //             className="form-check-input"
-    //             type="checkbox"
-    //             value=""
-    //             id="flexCheckDefault"
-    //           />
-    //           <label className="form-check-label" htmlFor="flexCheckDefault">
-    //             Male
-    //           </label>
-    //         </div>
-    //         <div className="form-check me-2">
-    //           <input onChange={(e)=>{inputDataStore(e.target.checked , e.target.name)}}
-    //             name='female'
-    //             className="form-check-input"
-    //             type="checkbox"
-    //             value=""
-    //             id="flexCheckDefault"
-    //           />
-    //           <label className="form-check-label" htmlFor="flexCheckDefault">
-    //             Female
-    //           </label>
-    //         </div>
-    //         <div className="form-check me-2">
-    //           <input onChange={(e)=>{inputDataStore(e.target.checked , e.target.name)}}
-
-    //           name='other'
-    //             className="form-check-input"
-    //             type="checkbox"
-    //             value=""
-    //             id="flexCheckDefault"
-    //           />
-    //           <label className="form-check-label" htmlFor="flexCheckDefault">
-    //             Other
-    //           </label>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    //       <div className="text-center mt-5">
-    //         <button className="btn btn-outline-dark px-4 py-2" onClick={()=>{handleSubmit()}}>Sign Up</button>
-    //       </div>
-    // </div>
     <div className="container">
       <div className="row justify-contact-center align-item-center mt-5">
         <div className="col-lg-6">
@@ -136,29 +59,29 @@ const Register = () => {
             autoComplete="off"
           >
             <Form.Item
-              label="Full Name"
-              name="fullname"
+              label="First Name"
+              name="firstname"
               rules={[
                 {
                   required: true,
-                  message: "Please input your fullname!",
+                  message: "Please input your Firstname!",
                 },
               ]}
             >
-              <Input onChange={(e) => { inputDataStore(e.target.value, 'fullName') }} />
+              <Input name="firstname" onChange={(e) => { inputDataStore( e.target.name ,e.target.value) }} />
             </Form.Item>
 
             <Form.Item
-              label="User Name"
-              name="username"
+              label="Last Name"
+              name="Lastname"
               rules={[
                 {
                   required: true,
-                  message: "Please input your username!",
+                  message: "Please input your Lastname!",
                 },
               ]}
             >
-              <Input onChange={(e) => { inputDataStore(e.target.value, 'UserName') }} />
+              <Input name="lastname" onChange={(e) => { inputDataStore(e.target.name , e.target.value) }} />
             </Form.Item>
 
             <Form.Item
@@ -171,7 +94,7 @@ const Register = () => {
                 },
               ]}
             >
-              <Input onChange={(e) => { inputDataStore(e.target.value, 'email') }} />
+              <Input name="email" type="email" onChange={(e) => { inputDataStore(e.target.name , e.target.value) }} />
             </Form.Item>
 
             <Form.Item
@@ -184,7 +107,8 @@ const Register = () => {
                 },
               ]}
             >
-              <Input.Password onChange={(e) => { inputDataStore(e.target.value, 'password') }} />
+              <Input.Password name="pasword" onChange={(e) => { inputDataStore(e.target.name , e.target.value) }} />
+              <p id="errorName"></p>
             </Form.Item>
 
             <Form.Item
@@ -197,7 +121,7 @@ const Register = () => {
                 },
               ]}
             >
-              <Input.Password onChange={(e) => { inputDataStore(e.target.value, 'conformPassword') }} />
+              <Input.Password name="conformpassword" onChange={(e) => { inputDataStore(e.target.name , e.target.value) }} />
             </Form.Item>
 
             <Form.Item
@@ -211,7 +135,7 @@ const Register = () => {
               <Checkbox>Remember me</Checkbox>
             </Form.Item>
 
-            <Form.Item
+            {/* <Form.Item
               name="Gender"
               rules={[
                 {
@@ -224,10 +148,10 @@ const Register = () => {
                 span: 16,
               }}
             >
-              <Checkbox onChange={(e) => { inputDataStore(e.target.checked, 'male') }}>Male</Checkbox>
-              <Checkbox onChange={(e) => { inputDataStore(e.target.checked, 'felmale') }}>Female</Checkbox>
-              <Checkbox onChange={(e) => { inputDataStore(e.target.checked, 'other') }}>Other</Checkbox>
-            </Form.Item>
+              <Checkbox name="male" onChange={(e) => { inputDataStore(e.target.name , e.target.checked) }}>Male</Checkbox>
+              <Checkbox name="female" onChange={(e) => { inputDataStore(e.target.name , e.target.checked)}}>Female</Checkbox>
+              <Checkbox name="other" onChange={(e) => { inputDataStore(e.target.name , e.target.checked)}}>Other</Checkbox>
+            </Form.Item> */}
 
             <Form.Item
               className="mt-3"
@@ -236,7 +160,9 @@ const Register = () => {
                 span: 16,
               }}
             >
-              <button className='my-btn theme-btn'>
+              <Link to="/login">You have already account ?</Link>
+              <br />
+              <button className='my-btn theme-btn mt-2' onClick={()=> submitHandle()}>
                 Sign Up
               </button>
             </Form.Item>

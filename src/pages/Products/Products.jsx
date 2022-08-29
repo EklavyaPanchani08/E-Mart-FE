@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Link } from "react-router-dom";
+import '../../scss/comman.scss'
 
 const Products = () => {
   const [data, setData] = useState([]);

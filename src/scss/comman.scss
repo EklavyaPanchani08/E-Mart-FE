@@ -1,0 +1,67 @@
+//===============NAVBAR=================//
+.nav-toggle {
+  cursor: pointer;
+}
+
+@media (min-width: 767px) {
+  .nav-toggle {
+    display: none !important;
+  }
+}
+
+.nav-item {
+  .nav-link {
+    border-bottom: 1px solid transparent;
+    transition: all 0.8s;
+  }
+
+  .nav-link:hover {
+    color: #9c9efe !important;
+    border-bottom: 1px solid #9c9efe;
+  };
+}
+@media (max-width:500px) {
+  .nav-logo{
+    width: 100px !important;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// ==============FROM================//
+.ant-input:focus,
+.ant-input-focused {
+  border-color: #9c9efe !important;
+  box-shadow: none !important;
+}
+
+.ant-input {
+  padding: 7px 0px !important;
+}
+
+.ant-input-affix-wrapper>input.ant-input {
+  padding: 3px !important;
+}
+
+.ant-input:hover {
+  border-color: #9c9efe !important;
+}
+
+.ant-input-affix-wrapper-focused,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: #9c9efe !important;
+}
+
+.ant-form-item-label>label {
+  font-size: 15px !important;
+  font-weight: 500;
+  padding-right: 15px !important;
+  padding-top: 5px !important;
+}

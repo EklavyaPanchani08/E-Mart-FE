@@ -4,6 +4,7 @@ import { React, useState, useEffect } from "react";
 import { addCart } from "../../Redux/Action";
 import Skeleton from "react-loading-skeleton";
 import { Link, useParams, useSearchParams } from "react-router-dom";
+import '../../scss/comman.scss'
 
 const Product = () => {
   const { id } = useParams();

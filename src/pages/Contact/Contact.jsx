@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Form, Input, Button } from 'antd';
 import '../../scss/button.scss'
 import '../Home/home.scss'
+import '../../scss/comman.scss'
 const { TextArea } = Input;
 
 const Contact = () => {
