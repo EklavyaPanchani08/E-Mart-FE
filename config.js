@@ -1,0 +1,1 @@
+export const DATABASE_IP = "192.168.0.127";

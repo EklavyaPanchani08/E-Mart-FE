@@ -1,32 +1,44 @@
-.register-img{
+.register-img {
     width: 600px;
 }
-.form{
-    margin-top: 100px;       
+
+.form {
+    margin-top: 100px;
 }
+
 @media (max-width:1220px) {
-    .register-img{
-        width:550px ;
+    .register-img {
+        width: 550px;
     }
 }
+
 @media (max-width:991px) {
-    .register-img{
-        width:500px ;
+    .register-img {
+        width: 500px;
         margin: 0px auto;
         display: flex
     }
-    .form{
+
+    .form {
         margin-top: 0px !important;
         padding-right: 80px;
     }
 }
+
 @media (max-width:575px) {
-    .register-img{
-        width:450px;
+    .register-img {
+        width: 450px;
     }
-    .form{
+
+    .form {
         padding-right: 0px !important;
         align-items: left;
         text-align: left;
     }
 }
+
+message.config {
+    top: 500px !important;
+}
+
+;

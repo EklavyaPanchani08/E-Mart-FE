@@ -8,13 +8,22 @@ import '../node_modules/font-awesome/css/font-awesome.min.css'
 import { BrowserRouter } from 'react-router-dom';
 // import { Provider } from 'react-redux';
 import store from "./Redux/store";
+import { message } from 'antd';
+import client from './ApolloConetion';
+import { ApolloProvider } from '@apollo/client';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+message.config({
+  top: 95,
+});
 root.render(
   <React.StrictMode>
     {/* <Provider store={store}> */}
     <BrowserRouter>
-      <App />
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
     </BrowserRouter>
     {/* </Provider> */}
   </React.StrictMode>
