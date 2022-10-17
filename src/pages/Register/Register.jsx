@@ -1,6 +1,6 @@
-import { React } from "react";
+import React from "react";
 import { useState } from "react";
-import { Button, Checkbox, Form, Input, Radio, message } from "antd";
+import { Button, Checkbox, Form, Input, Radio } from "antd";
 import "antd/dist/antd.css";
 import Img from "../../assets/signup.jpg";
 import "./register.css";
@@ -9,61 +9,43 @@ import "../../scss/comman.scss";
 import "../../scss/button.scss";
 import { Link } from "react-router-dom";
 import { CREATE_USER } from "./RegisterMutation";
-import { useMutation } from '@apollo/client';
+import { gql, useMutation } from "@apollo/client";
 
 const Register = () => {
   // All States
-  const [inputData, setInputData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    password: "",
-    conformpassword: "",
-    gender: "",
-  });
-  console.log("🚀 ~ file: Register.jsx ~ line 23 ~ Register ~ inputData", inputData)
-
-  const [createUser, { loading }] = useMutation(CREATE_USER);
+  const [inputData, setInputData] = useState({});
+  console.log(
+    "🚀 ~ file: Register.jsx ~ line 11 ~ Register ~ inputData",
+    inputData
+  );
 
   const inputDataStore = (name, value) => {
     setInputData({ ...inputData, [name]: value });
   };
-  const submitHandle = (e) => {
-    console.log("e", e);
-    debugger
-    e.preventDefault();
-    if (
-      inputData.firstname == "" &&
-      inputData.lastname == "" &&
-      inputData.email == "" &&
-      inputData.password == "" &&
-      inputData.conformPassword == ""
-    ) {
-      message.error("Please Enter All Filed");
-    } else {
-      createUser({
-        variable: {
-          input: {
-            firstName: inputData?.firstname,
-            lastName: inputData?.lastname,
-            email: inputData?.email,
-            password: inputData?.password,
-            gender: inputData?.gender,
-          }
+  const onFinish = (values) => {
+    console.log("Success:", values);
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
+  const [userRegister, { data, error, loading }] = useMutation(CREATE_USER);
+  console.log("🚀 ~ file: Register.jsx ~ line 33 ~ Register ~ error", error)
+  console.log("🚀 ~ file: Register.jsx ~ line 33 ~ Register ~ data", data)
+  const submitHandle = () => {
+    debugger;
+    userRegister({
+      variable: {
+        createUser: {
+          firstName : inputData.firstname,
+          lastName: inputData.lastname,
+          email : inputData.email,
+          password : inputData.pasword,
+          gender : inputData.gender,
         },
-      })
-        .then(({ data }) => {
-          console.log("🚀 ~ file: Register.jsx ~ line 51 ~ .then ~ data", data)
-          message.success("Account Successfully Added");
-          setInputData({ ...inputData, firstname: "", lastname: "", email: "", password: "", conformPassword: "" });
-        })
-        .catch((error) => {
-          console.log("🚀 ~ file: Register.jsx ~ line 60 ~ submitHandle ~ error", error.message)
-          console.log("++++++++++++++++")
-          message.error(error.message);
-        });
-    }
-  }
+      },
+    });
+  };
   return (
     <div className="container">
       <div className="row justify-contact-center align-item-center mt-5">
@@ -83,6 +65,8 @@ const Register = () => {
             initialValues={{
               remember: true,
             }}
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
             autoComplete="off"
           >
             <Form.Item
@@ -105,7 +89,7 @@ const Register = () => {
 
             <Form.Item
               label="Last Name"
-              name="lastname"
+              name="Lastname"
               rules={[
                 {
                   required: true,
@@ -148,15 +132,10 @@ const Register = () => {
                   required: true,
                   message: "Please input your password!",
                 },
-                {
-                  pattern: /^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$/,
-                  message:
-                    "Password must be 8 characters & include letters & numbers",
-                },
               ]}
             >
               <Input.Password
-                name="password"
+                name="pasword"
                 onChange={(e) => {
                   inputDataStore(e.target.name, e.target.value);
                 }}
@@ -169,21 +148,8 @@ const Register = () => {
               rules={[
                 {
                   required: true,
-                  message: "Please confirm your password!",
+                  message: "Please input your conform password!",
                 },
-                ({ getFieldValue }) => ({
-                  validator(_, value) {
-                    if (!value || getFieldValue("password") === value) {
-                      return Promise.resolve();
-                    }
-
-                    return Promise.reject(
-                      new Error(
-                        "The two passwords that you entered do not match!"
-                      )
-                    );
-                  },
-                }),
               ]}
             >
               <Input.Password
@@ -218,34 +184,10 @@ const Register = () => {
                 span: 16,
               }}
             >
-              <Radio.Group name="gender">
-                <Radio
-                  name="male"
-                  value={"male"}
-                  onChange={(e) => {
-                    inputDataStore(e.target.name, e.target.value);
-                  }}
-                >
-                  male
-                </Radio>
-                <Radio
-                  name="female"
-                  value={"female"}
-                  onChange={(e) => {
-                    inputDataStore(e.target.name, e.target.value);
-                  }}
-                >
-                  female
-                </Radio>
-                <Radio
-                  name="other"
-                  value={"other"}
-                  onChange={(e) => {
-                    inputDataStore(e.target.name, e.target.value);
-                  }}
-                >
-                  other
-                </Radio>
+              <Radio.Group name="gender" onChange={(e)=>inputDataStore("gender", e.target.value)}>
+                <Radio value={"male"}>Male</Radio>
+                <Radio value={"female"}>Female</Radio>
+                <Radio value={"other"}>Other</Radio>
               </Radio.Group>
             </Form.Item>
 
@@ -260,7 +202,7 @@ const Register = () => {
               <br />
               <button
                 className="my-btn theme-btn mt-2"
-                onClick={(e) => submitHandle(e)}
+                onClick={() => submitHandle()}
               >
                 Sign Up
               </button>

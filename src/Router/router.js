@@ -7,6 +7,7 @@ import Login from '../pages/Login/Login';
 import Product from '../pages/OneProduct/Product';
 import Products from '../pages/Products/Products';
 import Register from '../pages/Register/Register';
+import Search from '../pages/Search/Search';
 
 const Router = () => {
 
@@ -45,6 +46,11 @@ const Router = () => {
       path: "/contact",
       isExact: true,
       element: <Contact />,
+    },
+    {
+      path: "/search",
+      isExact: true,
+      element: <Search />,
     },
   ]);
 
